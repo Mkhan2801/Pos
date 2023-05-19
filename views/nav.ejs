@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Test comp.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+                <a <%if(active=="home"){%>
+                  class="nav-link active disabled"<%} else {%>class="nav-link" <% } %>
+                     href="/">Home</a>
+            </li>
+              <li class="nav-item">
+                <a <%if(active=="sale"){%>
+                  class="nav-link active disabled"<%} else {%>class="nav-link" <% } %>
+                   href="/sale">Sale</a>
+            </li>
+              <li class="nav-item">
+                <a <%if(active=="items"){%>
+                  class="nav-link active disabled"<%} else {%>class="nav-link" <% } %>
+                   href="/item">Items</a>
+            </li>
+            <li class="nav-item">
+                <a <%if(active=="report"){%>
+                  class="nav-link active disabled"<%} else {%>class="nav-link" <% } %>
+                   href="/report">Reports</a>
+            </li>
+              <li class="nav-item">
+                <a <%if(active=="exp"){%>
+                  class="nav-link active disabled"<%} else {%>class="nav-link" <% } %>
+                   href="/exp">Exp</a>
+            </li>
+              <li class="nav-item">
+                <a <%if(active=="todo"){%>
+                  class="nav-link active disabled"<%} else {%>class="nav-link" <% } %>
+                   href="/todo">Todo</a>
+            </li>
+              
+        </ul>
+        <div class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchQuery">
+          <button class="btn btn-outline-success" type="submit" id="search">Search</button>
+        </div>
+      </div>
+    </div>
+  </nav>

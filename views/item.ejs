@@ -1,0 +1,44 @@
+
+<link rel="stylesheet" href="public\css\overlay.css">
+
+<%- include('./2bar'); %>
+
+<div class="table-responsive mt-5 p-5" style="background-color: #111; height : auto">
+  <table class="table  table-sm text-bg-dark rounded">
+    <thead>
+      <tr>
+        <th class="col-1">S no.</th>
+        <th class="col-5">Item name</th>
+        <th class="col-2 ">Price</th>
+        <th class="col-1">Opening</th>
+        <th class="col-1 text-danger">Sell</th>
+        <th class="col-1 text-success">Buy</th>
+        <th class="col-1">Remaing</th>
+      </tr>
+    </thead>
+    <tbody id="tBody">
+    
+    </tbody>
+    <button id="exportData"  class="btn btn-primary btn-lg" style="position:fixed;bottom:5px;right:15px;margin:0;padding:5px 3px;" onclick="ExportData()">Save Data</button>
+ 
+  </table>
+</div>
+
+<!-- modal-overlay -->
+
+<div class="modal-overlay">
+  <div class="modal-container">
+
+    <div class="container text-light">
+      
+      <%- include('./itembill'); %>
+
+
+    </div>
+
+    <button class="close-btn btn btn-danger">
+      close </button>
+  </div>
+</div>
+<script src="public\js\overlay.js"></script>
+<script src="public\js\item.js"></script>

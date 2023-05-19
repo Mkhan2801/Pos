@@ -1,0 +1,247 @@
+<style>
+  .question-text {
+    display: none;
+  }
+
+  .show-text .question-text {
+    display: block;
+  }
+</style>
+
+<link rel="stylesheet" href="public\css\overlay.css">
+<%- include('./2bar'); %>
+  <div class="row" style="width: 98vw;padding-left:1vw ;">
+    <div class="col-md-6">
+      <h1 class="text-primary">Dr</h1>
+      <div class="p-5 text-bg-dark rounded-3">
+        
+        <hr class="border border-primary border-3 opacity-75">
+       <div class=" d-flex justify-content-between">
+        <h2>Opening Balance </h2>
+        <h2 class=""  >Rs: <span id="opBal">00</span></h2>
+      </div>
+
+      <hr class="border border-primary border-3 opacity-75">
+       
+        <div class="p-3">
+          <article class="question">
+            <div class="question-title">
+              <h3 class="question-btn">
+                <div class=" d-flex justify-content-between">
+                  <h4>Cash </h4>
+                  <h4 class="" >Rs: <span id="opCash">00</span></h4>
+                </div> 
+              </h3>
+            </div>
+          </article>
+          <article class="question">
+            <div class="question-title">
+              <h3 class="question-btn">
+                 <div class=" d-flex justify-content-between">
+                <h4>Paytm </h4>
+                <h4 class="">Rs: <span id="opPaytm">00</span></h4>
+              </div>
+            </h3>
+            </div>
+            
+            
+          </article>
+
+        </div> 
+        
+        <hr class="border border-primary border-3 opacity-75">
+        <div class=" d-flex justify-content-between">
+          <h3>recived </h3>
+          <h3 class="" >Rs: <span id="re">00</span></h3>
+        </div>
+        
+<hr class="border border-primary border-3 opacity-75">
+        <div class="p-3">
+          <article class="question">
+            <div class="question-title">
+              <h3 class="question-btn"> <div class=" d-flex justify-content-between">
+                <h4>cash </h4>
+                <h4 class="" >Rs:  <span id="reCash">00</span></h4>
+              </div></h3>
+            </div>
+            <div class="question-text p-3">
+              <ul class="list-group mb-3" id="reCashd">
+                
+              </ul>
+            </div>
+          </article>
+          <article class="question">
+            <div class="question-title">
+              <h3 class="question-btn">
+                 <div class=" d-flex justify-content-between">
+                <h4>Paytm </h4>
+                <h4 class="">Rs: <span id="rePaytm">00</span></h4>
+              </div>
+             </h3>
+            </div> 
+              <div class="question-text p-3">
+              <ul class="list-group mb-3" id="rePaytmd">
+               
+              </ul>
+            </div>
+          </article>
+
+        </div>
+
+      </div> 
+      <div class=" d-flex justify-content-between text-light">
+        <h2>Total </h2>
+        <h2 class="" >Rs:  <span id="drTotal">00</span></h2>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <h1 class="text-danger">Cr</h1>
+      <div class="p-5 bg-body-tertiary border rounded-3 expand">
+        
+        <hr class="border border-primary border-3 opacity-75">
+       <div class=" d-flex justify-content-between">
+        <h2>Expense </h2>
+        <h2 class="" >Rs:  <span id="exp">00</span></h2>
+      </div>
+
+      <hr class="border border-primary border-3 opacity-75">
+       
+        <div class="p-3">
+          <article class="question">
+            <div class="question-title">
+              <h3 class="question-btn">
+                <div class=" d-flex justify-content-between">
+                  <h4>Cash </h4>
+                  <h4 class="" >Rs: <span id="expCash">00</span></h4>
+                </div> </h3>
+            </div>
+            <div class="question-text p-3">
+              <ul class="list-group mb-3" id="expCashd">
+               
+              </ul>
+            </div>
+          </article>
+          <article class="question">
+            <div class="question-title">
+              <h3 class="question-btn">
+                 <div class=" d-flex justify-content-between">
+                <h4>Paytm </h4>
+                <h4 class="" >Rs: <span id="expPaytm">00</span></h4>
+              </div></h3>
+            </div>
+            <div class="question-text p-3">
+              <ul class="list-group mb-3 " id="expPaytmd">
+                
+
+              </ul>
+            </div>
+          </article>
+
+        </div> 
+        
+        <hr class="border border-primary border-3 opacity-75">
+        <div class=" d-flex justify-content-between">
+          <h3>Remaing </h3>
+          <h3 class="" >Rs: <span id="rem">00</span></h3>
+        </div>
+        
+<hr class="border border-primary border-3 opacity-75">
+        <div class="p-3">
+          <article class="question">
+            <div class="question-title">
+              <h3 class="question-btn"> <div class=" d-flex justify-content-between">
+                <h4>cash </h4>
+                <h4 class="" >Rs: <span id="remCash">00</span></h4>
+              </div></h3>
+            </div>
+          </article>
+          <article class="question">
+            <div class="question-title">
+              <h3 class="question-btn">
+                 <div class=" d-flex justify-content-between">
+                <h4>Paytm </h4>
+                <h4 class="" >Rs: <span id="remPaytm">00</span></h4>
+              </div>
+             </h3>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+       
+      <div class=" d-flex justify-content-between text-light">
+        <h2>Total </h2>
+        <h2 class="" >Rs: <span id="crTotal">00</span></h2>
+      </div>
+    </div>
+    
+  </div>
+  </div>
+
+  <div class="modal-overlay h-100">
+    <div class="modal-container">
+
+      <div class="container text-light col-6">
+
+
+
+        <div class="row g-5 mt-5">
+
+          <div class="col">
+
+            <div>
+              <div class="row g-3">
+                <div class="col-sm-12">
+                  <label for="firstName" class="form-label">
+                    <h4 class="mb-3">Name</h4>
+                  </label>
+                  <input type="text" class="col-6" id="firstName" placeholder="" value="" required="">
+                </div>
+
+              </div>
+
+              <hr class="my-4">
+
+              <div class="row g-3">
+                <div class="col-sm-12">
+                  <label for="firstName" class="form-label">
+                    <h4 class="mb-3">Amount </h4>
+                  </label>
+                  <input type="number" class="col-3" id="amount" placeholder="00.00" value="" required="">
+                </div>
+
+              </div>
+
+              <hr class="my-4">
+
+              <h4 class="mb-3">Payment</h4>
+              <div class="d-flex" id="paymentMethod">
+                <div class="form-check form-check-inline col-6">
+                  <input class="" type="radio" name="payBy" id="cash" value="cash" checked>
+                  <label class="form-check-label" for="cash">Cash</label>
+                </div>
+                <div class="form-check form-check-inline col-6">
+                  <input class="" type="radio" name="payBy" id="paytm" value="paytm">
+                  <label class="form-check-label" for="paytm">Paytm</label>
+                </div>
+              </div>
+
+
+              <hr class="my-4">
+
+              <button class="w-100 btn btn-primary btn-lg" id="save">Add Amount</button>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <button class="close-btn btn btn-danger">
+        close </button>
+    </div>
+  </div>
+  <script src="public\js\report.js"></script>

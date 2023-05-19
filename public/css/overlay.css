@@ -1,0 +1,35 @@
+
+  
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: rgba(10, 10, 10, 0.8);
+  margin-top: 5rem;
+    visibility: hidden;
+    z-index: -10;
+  }
+  
+  .open-modal {
+    visibility: visible;
+    z-index: 10;
+  }
+  .modal-container {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: grid;
+    place-items: center;
+  }
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+  }
+  .close-btn:hover {
+    transform: scale(1.3);
+  }
+

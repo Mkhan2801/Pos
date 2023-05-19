@@ -1,0 +1,48 @@
+	<div class="mt-5 d-flex align-items-center justify-content-center">
+        <div class="col mt-5 text-light ">
+            
+            <div class="col-8 d-flex align-items-center ">
+                <h2 class="col-3">Add Task</h2>
+                <input type="text" 
+                    class="form-control col-4" id="task">
+            </div>
+            <div class="col-8 d-flex align-items-center ">
+                <h2 class="col-3">Remark</h2>
+                <input type="text" 
+                    class="form-control col-4" id="remark">
+            </div>
+            <div class="col-2 mt-2">
+                <button class="form-control btn btn-primary" id="addTask">Submit</button>
+            </div>
+
+
+    
+    
+            
+<div class="table-responsive mt-5 p-5" style="background-color: #111; height : auto">
+    <table class="table  table-sm text-bg-dark rounded">
+      <thead>
+        <tr>
+          <th class="col-1">S no.</th>
+          <th class="col-2 ">Date</th>
+          <th class="col-5">Work</th>
+          <th class="col-1"></th>
+          <th class="col-1">Complete On</th>
+          <th class="col-1">Remarks</th>
+        </tr>
+      </thead>
+      <tbody id="tBody">
+      
+      </tbody>
+      <button id="exportData"  class="btn btn-primary btn-lg" style="position:fixed;bottom:5px;right:15px;margin:0;padding:5px 3px;" onclick="ExportData()">Save Data</button>
+   
+    </table>
+  </div>
+    
+            
+        </div>
+
+    </div>
+    
+  
+    <script src="public\js\todo.js"></script>

@@ -1,0 +1,91 @@
+<main>
+
+    <div class="row g-5 mt-5">
+      <div class="col-md-7 col-lg-8 order-md-last">
+        <table class="table  table-sm text-bg-light rounded">
+          <thead>
+            <tr>
+              <th class="col-1">S no.</th>
+              <th class="col-5">Item name</th>
+              <th class="col-1"></th>
+              <th class="col-1 ">Price</th>
+              <th class="col-1">Qty</th>
+              <th class="col-1 text-danger">Sub total</th>
+            </tr>
+          </thead>
+          <tbody id="bill">
+            <tr>
+              <td>1</td>
+              <td><input type="text" class="form-control" id="iname1"></td>
+              <td style="text-align: right; font-size: larger;" >Rs: </td>
+              <td><input type="number" class="form-control" id="iprice1"></td>
+              <td><input type="number" class="form-control" id="iqty1"></td>
+              
+              <td class="text-danger" id="isub1"></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td style="text-align: center; font-size: larger;">Total :-</td>
+              <td style=" font-size: larger;" >00.00</td>
+              <td></td>
+            </tr>
+          </tbody>
+
+        </table>
+
+        <hr class="my-4">
+
+        <button class="w-100 btn btn-primary" id="addItem">Add Item</button>
+      </div>
+      <div class="col-md-5 col-lg-4">
+
+        <div >
+          <div class="row g-3">
+            <div class="col-sm-12">
+              <label for="firstName" class="form-label">
+                <h4 class="mb-3">Billing address</h4>
+              </label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+            </div>
+
+          </div>
+
+          <hr class="my-4">
+
+          <div class="row g-3">
+            <div class="col-sm-12">
+              <label for="firstName" class="form-label">
+                <h4 class="mb-3">Amount </h4>
+              </label>
+              <input type="number" class="col-6" id="amount" placeholder="00.00" value="" required="">
+            </div>
+
+          </div>
+
+          <hr class="my-4">
+
+          <h4 class="mb-3">Payment</h4>
+    <div class="d-flex" id="paymentMethod">
+      <div class="form-check form-check-inline col-3">
+        <input class="" type="radio" name="payBy" id="cash" value="cash">
+        <label class="form-check-label" for="cash">Cash</label>
+      </div>
+      <div class="form-check form-check-inline col-3">
+        <input class="" type="radio" name="payBy" id="paytm" value="paytm">
+        <label class="form-check-label" for="paytm">Paytm</label>
+      </div>
+      <div class="form-check form-check-inline col-3">
+        <input class="" type="radio" name="payBy" id="credit" value="selfPay" checked>
+        <label class="form-check-label" for="credit">Self pay</label>
+      </div>
+    </div>
+
+
+          <hr class="my-4">
+
+          <button class="w-100 btn btn-primary btn-lg" id="save">Add bill</button>
+  </div>
+      </div>
+    </div>
+  </main>

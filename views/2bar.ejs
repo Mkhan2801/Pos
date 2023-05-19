@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="public\css\date.css">
+
+<div class="px-3 py-2 border-bottom mt-5 mb-3">
+  <div class="container d-flex flex-wrap  mt-3 ">
+    <div id="query" class="col-12 col-lg-auto mb-2 text-light mb-lg-0 me-lg-auto">
+      <label for="from">From:</label>
+      <input type="date" id="from" name="from">
+      <label for="to">To:</label>
+      <input type="date" id="to" name="to" <%if(active=="items" || active =="report" ){%> disabled <%}%> >
+      <button id="submit" class="btn btn-primary btn-lg">Search</button>
+
+    </div>
+
+    <div class="text-end px-3 py-2">
+
+      <%if(active=="sale"){%>
+        <button type="button" class="btn btn-primary btn-lg modal-btn" id="cr"> Cr</button>
+        <button type="button" class="btn btn-primary btn-lg modal-btn" id="paytm"> Paytm </button>
+        <button type="button" class="btn btn-primary btn-lg modal-btn" id="cash"> Cash
+          <%}%>
+            <%if(active=="exp"){%>
+              <button type="button" class="btn btn-primary btn-lg modal-btn"> Add Exp
+                <%}%>
+                  <%if(active=="items"){%>
+                    <button type="button" class="btn btn-primary btn-lg modal-btn"> Add Bill
+                      <%}%>
+                        <%if(active=="report"){%>
+                          <button type="button" class="btn btn-primary btn-lg modal-btn"> Add Amount
+                            <%}%>
+                          </button>
+                          <!-- add variable for addbill cr add exp -->
+    </div>
+  </div>
+</div>
+
+<script>
+
+  document.getElementById('to').valueAsDate = new Date();
+  document.getElementById('from').valueAsDate = new Date(Date.now() - 864e5)
+
+</script>
